@@ -1,0 +1,67 @@
+*Entar no node via vscode
+1º Abre o terminal do vscode;
+2º Digita a palavra node e da enter;
+3º .exit == para sair do terminal do node;
+4º CTRL + L == Limpar o terminal;
+
+
+*Tipos de Váriaveis - typeof == Verificar o tipo da variavel.
+string
+number
+-Infinity
+-Nan
+boolean
+null
+undefined
+object
+-Array
+function
+
+*Conversão de String para Number
+Number.parseInt(nomeVariavel) == Converter para inteiro;
+Number.parseFloat(nomeVariavel) == Converter para decimal (float);
+Number(nomeVariavel) == O JS decide o tipo númerico sozinho;
+
+EX: var n1 = Number.parseInt(prompt('Digite um número'))
+
+
+*Conversão de Number para String
+String(nomeVariavel)
+ntoString()
+
+
+*Concatenação
+nome = Maria
+idade 55
+
+alert("A paciente" + nome "tem" + idade + "anos.")
+
+*Template String para concatenar
+nome = Maria
+idade 55
+
+alert(`A paciente ${nome} tem ${idade} anos.´)
+
+*Formatação de String
+var s = 'JavaScript'
+
+s.length = Quantos caracteres a string tem
+s.toUpperCase() = Coloca todo o texto da string em Maiúsculas
+stoLowerCase() = Coloca todo o texto da string em Minúsculas
+
+*Formatação de Números
+n1 = 1545.5
+
+n1.toFixed(2) == Vai mostrar 1545.50
+n1.toFixed(2).replace('.', ',') Vai mostrar 1545,50
+n1.toLocaleString('pt-BR',  {style: 'currency', currency: 'BRL'}) Vai mostrar R$ 1,545.50
+
+
+
+*Escrever na tela
+nome = Maria
+idade 55
+
+document.white(`A paciente ${nome.toUpperCase()} tem ${idade} anos.´)
+
+
