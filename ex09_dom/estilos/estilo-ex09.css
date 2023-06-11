@@ -1,0 +1,8 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+div#cobaia{
+    border: 1px solid red;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/estilo-ex09.css">
+    <title>Manipulando o DOM</title>
+</head>
+<body>
+    <div id="div-principal">
+        <h1>DOM</h1>
+
+        <p>Paragráfo 1</p>
+        <p id="paragrafo2">Paragráfo 2</p>
+        <p id="paragrafo3">Paragráfo 3</p>
+
+        <button type="button" value="btn-clique" onclick="clicar()">Clique</button>
+
+        <div id="cobaia">:)</div>
+    </div>
+
+
+    <script>
+        d = window.document.getElementById('div-principal')
+        d.style.background = 'gray'
+
+        p1 = window.document.getElementsByTagName('p')[0]
+        p1.innerText = 'Mudei o texto via JS'
+
+        p3 = window.document.querySelector('p#paragrafo3')
+        p3.style.color = 'yellow'
+
+        function clicar(){
+            var p2 = window.document.getElementById('paragrafo2')
+            p2.style.background = 'red'
+        }
+    
+        d = window.document.getElementById('cobaia')
+        d.addEventListener('mouseenter', mudarDiv)
+        d.addEventListener('mouseout', voltarDiv)
+    
+        function mudarDiv(){
+            d.innerText = 'Hello World DOM'
+            d.style.background = 'yellow'
+        }
+
+        function voltarDiv(){
+            d.innerText = ':)'
+        } 
+    </script>
+</body>
+</html>

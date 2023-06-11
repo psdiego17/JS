@@ -1,67 +1,199 @@
 *Entar no node via vscode
 1º Abre o terminal do vscode;
 2º Digita a palavra node e da enter;
-3º .exit == para sair do terminal do node;
-4º CTRL + L == Limpar o terminal;
+3º .exit - para sair do terminal do node;
+4º CTRL + L - Limpar o terminal;
+
+*Tipos de Váriaveis - (typeof) - Verificar o tipo da variavel.
+-string
+-number
+--Infinity
+--Nan
+-boolean
+-null
+-undefined
+-object
+--Array
+-function
 
 
-*Tipos de Váriaveis - typeof == Verificar o tipo da variavel.
-string
-number
--Infinity
--Nan
-boolean
-null
-undefined
-object
--Array
-function
 
-*Conversão de String para Number
-Number.parseInt(nomeVariavel) == Converter para inteiro;
-Number.parseFloat(nomeVariavel) == Converter para decimal (float);
-Number(nomeVariavel) == O JS decide o tipo númerico sozinho;
+//CONVERSÃO DE STRING PARA NUMBER
+Number.parseInt(nomeVariavel) - Converter para inteiro;
+Number.parseFloat(nomeVariavel) - Converter para decimal (float);
+Number(nomeVariavel) - O JS decide o tipo númerico sozinho;
 
 EX: var n1 = Number.parseInt(prompt('Digite um número'))
 
 
-*Conversão de Number para String
+
+//CONVERSÃO DE NUMBER PARA STRING
 String(nomeVariavel)
 ntoString()
 
 
-*Concatenação
-nome = Maria
-idade 55
 
-alert("A paciente" + nome "tem" + idade + "anos.")
+//CONCATENAÇÃO
+var nome = Maria
+var idade = 55
 
-*Template String para concatenar
-nome = Maria
-idade 55
+EX: alert("A paciente" + nome "tem" + idade + "anos.")
+
+-Template String para concatenar
+var nome = Maria
+var idade = 55
 
 alert(`A paciente ${nome} tem ${idade} anos.´)
 
-*Formatação de String
+
+
+//FORMATAÇÃO DE STRING
 var s = 'JavaScript'
 
-s.length = Quantos caracteres a string tem
-s.toUpperCase() = Coloca todo o texto da string em Maiúsculas
-stoLowerCase() = Coloca todo o texto da string em Minúsculas
+s.length - Quantos caracteres a string tem
+s.toUpperCase() - Coloca todo o texto da string em Maiúsculas
+stoLowerCase() - Coloca todo o texto da string em Minúsculas
 
-*Formatação de Números
+
+
+//FORMATAÇÃO DE NÚMEROS
 n1 = 1545.5
 
-n1.toFixed(2) == Vai mostrar 1545.50
-n1.toFixed(2).replace('.', ',') Vai mostrar 1545,50
-n1.toLocaleString('pt-BR',  {style: 'currency', currency: 'BRL'}) Vai mostrar R$ 1,545.50
+n1.toFixed(2) - Vai mostrar 1545.50
+n1.toFixed(2).replace('.', ',') - Vai mostrar 1545,50 substitui o primeiro elemento pelo segundo
+n1.toLocaleString('pt-BR',  {style: 'currency', currency: 'BRL'}) - Vai mostrar R$ 1,545.50
 
 
-
-*Escrever na tela
+//ESCREVER NA TELA
 nome = Maria
 idade 55
 
 document.white(`A paciente ${nome.toUpperCase()} tem ${idade} anos.´)
+
+
+
+//OPERADORES
+
+-OPERADORES ARITMÉTICOS:
++, -, *, /, %, **
+
+--Ordem de precedência: 
+1º ()
+2º **
+3º *, /, %
+4º +, -
+
+-OPERADORS DE ATRIBUIÇÃO:
+var n = 3
+var n += 5
+
+-OPERADORES RELACIONAIS: O resultado sempre vai ser um valor booleano: true ou false.
+>, <, >=, <=, ==, !=, ===
+
+EX: 5 > 2  - O Resultado vai ser: true.
+
+-OPERADORES LÓGICOS
+! (Negação NOT), && (Conjunção AND), || (Disjunção OR)
+
+--Ordem de precedência
+1º !
+2º &&
+3º || 
+
+OBS: Ordem de precedência geral:
+1º Aritméticos, 2º Relacionais, 3º Lógicos
+var a = 5
+var b = 8
+
+EX: a > b && b % 2 == 0 O resultado vai ser: false
+
+
+
+//OPERADOR TERNÁRIO
+teste ? true : false
+
+EX: media >= 7.0 ? 'Aprovado' : 'Reprovado'
+
+
+
+//DOM - DOCUMENT OBJECT MODEL
+watch in chrome
+
+window
+-location
+-document
+--html
+---head
+----meta
+----title
+---body
+----h1
+----p
+----div
+-history
+
+//COMO ACESSAR O DOM
+-tag
+getElementByTagName()
+
+EX: var p = window.document.getElementsByTagName('p') //Seleciona todos as TAG <p></p>
+EX: var p2 = window.document.getElementsByTagName('p')[2] //Selecionando uma TAG <p></p> especifica
+
+p2.style.color = 'blue'
+
+
+-id
+getElementById()
+
+EX:<div id="msg">Clique</div>
+
+var d = window.document.getElementById('msg')
+
+d.innerText = 'Clica logo'
+d.style.background = 'pink'
+ 
+-nome
+getElementsByName()
+
+
+-classe
+getElementsByClassName()
+
+
+-seletor
+querySelector()
+querySelectorAll()
+
+
+EX: <div id="msg">Clique</div>
+var d = window.document.querySelector('div#msg')
+d.style.background = 'green'
+
+
+
+//EVENTOS DOM
+-mouseenter //Quando o mouse entra na área configurada
+-mousemove //Quando move o mouse na área configurada
+-mousedown //Quando clica e segura o mouse na área configurada
+-mouseup //Quando solta o botão do mouse 
+-click //Quando clica
+<div id="cobaia" onclicck="clicar()">TESTE</div>
+
+<script>
+function clicar(){
+var a = window.document.getElementById('cobaia')
+  a.innerText = 'Rodou'
+}
+</script>
+
+-mouseout //Quando retira a seta do mouse da área configurada
+
+
+addEventListener('click', nomeFunction)
+
+
+
+
+
 
 
