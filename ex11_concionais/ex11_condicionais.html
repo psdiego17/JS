@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+</head>
+<body>
+    <div id="div-principal">
+        <input type="number" name="velocidade" id="velocidade">
+        <button type="button" value="btn-verificar" onclick="verificar()">Verificar</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        
+        function verificar(){
+            var velocidade = window.document.querySelector('input#velocidade')
+            var vel = Number(velocidade.value)
+            var resultado = window.document.querySelector('div#resultado')
+
+            resultado.innerHTML = `<p>Sua velocidade atual <strong>${vel}Km/h</strong></p>`
+
+            if (vel > 80){
+                resultado.innerHTML += `<p>Acima da velocidade</p>`
+            }else{
+                resultado.innerHTML += `<p>Continue dirigir com segurança</p>`
+            }
+        } 
+    </script>
+</body>
+</html>
