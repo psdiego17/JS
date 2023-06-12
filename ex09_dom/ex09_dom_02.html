@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="div-principal">
+        <input type="number" name="numero01" id="numero01"> +
+        <input type="number" name="numero02" id="numero02"> =
+        <input type="number" name="resultado" id="resultado">
+        <button type="button" value="btn-calcular" onclick="calcular()">Calcular</button>
+        <p id="res"></p>
+    </div>
+
+    <script>
+
+        function calcular(){
+            var n1 = document.getElementById('numero01')
+            var n2 = document.getElementById('numero02')
+            var num1 = Number.parseInt(n1.value)
+            var num2 = Number.parseInt(n2.value)
+            var soma = num1 + num2
+
+            document.getElementById('resultado').value = soma
+
+            var r = document.getElementById('res')
+            r.innerHTML = `A soma entre ${num1} e ${num2} é igual a ${soma}`     
+        }
+
+    </script>
+</body>
+</html>
