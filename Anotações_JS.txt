@@ -218,3 +218,25 @@ do{
 for(var c = 1; c <= 6; c++){
   console.log('hello')
 }
+
+
+//ARRAY
+
+let num = [5, 8, 4]
+console.log(num[2]) //Mostrar o valor armazenado em uma posição especifica do array
+console.log(num) //Mostra todos os valores armazenados no array
+
+num[3] = 6 //Adcionando valor em uma posição especifica do array.
+num.push(7) //Adcionando valor na última posição do array.
+num.length //Contar quantas as posições tem um array
+num.sort() //Ordenar o array por ordem crescente
+num.indexOf(8) //Procurar dentro do array um valor especifico, retorna a posição onde está armazenado o valor. Caso não tenha o valor procurado, ele retorna -1 
+
+for(let cont = 0; cont < num.length; cont++){
+ console.log(num[cont])
+}
+
+Usando For..in
+for(let n in num){
+  console.log(num[n})
+}
