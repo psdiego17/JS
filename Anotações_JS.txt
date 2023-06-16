@@ -132,6 +132,8 @@ window
 ----div
 -history
 
+
+
 //COMO ACESSAR O DOM
 -tag
 getElementByTagName()
@@ -240,3 +242,34 @@ Usando For..in
 for(let n in num){
   console.log(num[n})
 }
+
+
+//FUNÇÕES
+
+EX 1: 
+function soma(n1=0, n2=0){ //Dessa forma, deixando os parametros opcionais, caso passe apenas um valor na chamada da function, não vai da erro
+ return n1 + n2
+}
+
+console.log(soma(2, 5)) //Chamando a função passando os parametros
+console.log(soma(2)) //Chamando a função passando apenas um parametro, não vai da erro, pois na function os parametros estão configurados como opcionais, para quando não houver valor passado ser igual a zero
+
+
+EX 2:
+let v = function(x){ //Salvando o retorno de uma função em uma variavel
+ return x * 2 
+}
+
+console.log(v(5))
+
+
+EX 3:
+Recursividade, uma function, chama ela mesma dentro dela.
+
+//Objeto
+//Criação de Objeto
+let amigo = {nome: 'José', sexo = 'M', peso: 85.4, engordar(p){ this.peso += p}}
+
+amigo.engordar(2) //Chamando a função de dentro do objeto e passando um valor por parametro
+console.log(amigo) //Mostra todos os dados do objeto
+console.log(amingo.nome) //Mostra um dado especifico do objeto
