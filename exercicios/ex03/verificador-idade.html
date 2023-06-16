@@ -21,26 +21,23 @@
             </div>
 
             <div id="sexo">
-                <label for="sexos">Sexo:</label>
+                <label>Sexo:</label>
                 <label for="radio-masculino">Masculino</label>
-                <input type="radio" name="sexo" id="radio-masculino" value="radio-masculino">
+                <input type="radio" name="sexo" id="radio-masculino" value="Homem">
                 <label for="radio-feminino">Feminino</label>
-                <input type="radio" name="sexo" id="radio-feminino" value="radio-feminino">
+                <input type="radio" name="sexo" id="radio-feminino" value="Mulher">
             </div>
             
             <div id="botao">
-                <button type="submit" onclick="verificar()">Verificar</button>
+                <button type="submit" onclick="capturarDados()">Verificar</button>
             </div>
 
             <div>
-                <p>Preencha os dados acima para ver o resultado</p>
+                <p id="texto">Preencha os dados acima para ver o resultado</p>
             </div>
-            
         </div>
 
-        <div id="foto">
-        
-        </div>
+        <div id="foto"></div>
     </section>
 
     <footer>
