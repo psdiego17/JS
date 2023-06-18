@@ -20,6 +20,12 @@ for(let n = 0; n < numeros.length; n++){
 }
 console.log('...........')
 
+//For..in
 for(let n in numeros){
     console.log(`Na posição ${n} tem o valor: ${numeros[n]}`)
+}
+
+//For..of
+for(let n of numeros){
+    console.log(`Valor ${n}`)
 }
